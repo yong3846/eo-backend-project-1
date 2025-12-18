@@ -1,0 +1,86 @@
+* {
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ffffff;
+}
+
+
+
+.login-container {
+width: 360px;
+padding: 40px 30px;
+border-radius: 12px;
+text-align: center;
+}
+
+
+
+#main-btn {
+margin-bottom: 30px;
+padding: 6px 14px;
+border: none;
+border-radius: 20px;
+background-color: #e0e0e0;
+color: #333;
+cursor: pointer;
+}
+
+
+
+.input-box {
+width: 100%;
+height: 44px;
+margin-bottom: 14px;
+border-radius: 10px;
+border: none;
+background-color: #e5e5e5;
+resize: none;
+padding: 12px;
+font-size: 14px;
+}
+
+
+.input-box::placeholder {
+color: #777;
+}
+
+
+
+.button-group {
+display: flex;
+justify-content: space-between;
+margin: 18px 0;
+}
+
+
+.button-group button {
+width: 48%;
+height: 40px;
+border: none;
+border-radius: 10px;
+background-color: #dcdcdc;
+font-size: 14px;
+cursor: pointer;
+}
+
+
+
+#password-find {
+margin-top: 10px;
+width: 100%;
+height: 38px;
+border: none;
+border-radius: 10px;
+background-color: #e0e0e0;
+font-size: 13px;
+cursor: pointer;
+}

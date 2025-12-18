@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-.top {
+#top {
     display: flex;
 
     justify-content: flex-end;
@@ -36,7 +36,7 @@ body {
 }
 
 
-.middle {
+#middle {
     display: flex;
 
     justify-content: center;
@@ -91,4 +91,68 @@ body {
     cursor: pointer;
 
     font-size: 12px;
+}
+
+.profile {
+    position: relative;
+}
+
+
+.profile-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+    padding: 12px;
+    width: 150px;
+    
+    background-color: #ffffff;
+    border-radius: 12px;
+    
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+
+.profile-menu button {
+    padding: 8px 10px;
+    
+    border: none;
+    border-radius: 8px;
+    
+    background-color: #eaeaea;
+    
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+}
+
+.profile-menu button:hover {
+    background-color: #dcdcdc;
+}
+
+.menu-link {
+    display: block;
+
+    padding: 8px 10px;
+    border-radius: 8px;
+
+    background-color: #eaeaea;
+    color: #000;
+    text-decoration: none;
+
+    font-size: 13px;
+    text-align: left;
+}
+
+.menu-link:hover {
+    background-color: #dcdcdc;
+}
+
+.hidden {
+    display: none;
 }
