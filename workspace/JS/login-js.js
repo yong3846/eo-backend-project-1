@@ -1,25 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', function() {
 
-    const loginBtn = document.getElementById("loginBtn");
-    const signupBtn = document.getElementById("signupBtn");
-    const findBtn = document.getElementById("findBtn");
+    const form = document.getElementById('login-form');
+    const loginId = document.getElementById('loginId');
+    const loginPw = document.getElementById('loginPw');
+    const signupBtn = document.getElementById('signupBtn');
+    const findBtn = document.getElementById('findBtn');
 
-    if (loginBtn) {
-        loginBtn.addEventListener("click", () => {
-            location.href = "../index.html";
-        });
-    }
 
-    if (signupBtn) {
-        signupBtn.addEventListener("click", () => {
-            location.href = "./signup-page.html";
-        });
-    }
+    document.cookie = "isLogin=true; path=/";
 
-    if (findBtn) {
-        findBtn.addEventListener("click", () => {
-            location.href = "./password-page.html";
-        });
-    }
 
+    signupBtn.addEventListener('click', function() {
+        location.href = './signup-page.html';
+    });
+
+
+    findBtn.addEventListener('click', function() {
+        location.href = './password-page.html';
+    });
+
+
+    form.onsubmit = function () {
+        localStorage.setItem('isLogin', 'true');
+
+        alert('로그인 되었습니다.');
+        location.href = '../index.html';
+        return false;
+    };
 });

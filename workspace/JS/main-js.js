@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoutBtn = document.getElementById("logoutBtn");
 
 
-    
     function applyAuthUI() {
         const isLogin = localStorage.getItem("isLogin") === "true";
 
@@ -40,27 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    loginBtn.addEventListener("click", () => {
+    loginBtn.addEventListener("click", function() {
         login();
-        location.href = "./HTML/login.html";
+        // location.href = "./HTML/login.html";
     });
 
     logoutBtn.addEventListener("click", logout);
 
-    signupBtn.addEventListener("click", () => {
-        location.href = "./HTML/signup-page.html";
-    });
-
-    searchBtn.addEventListener("click", () => {
+    searchBtn.addEventListener("click", function() {
         location.href = "./HTML/question-result.html";
     });
 
-    profileBtn.addEventListener("click", (e) => {
+    profileBtn.addEventListener("click", function(e) {
         e.stopPropagation();
         profileMenu.classList.toggle("hidden");
     });
 
-    document.addEventListener("click", () => {
+    document.addEventListener("click", function() {
         profileMenu.classList.add("hidden");
     });
 
