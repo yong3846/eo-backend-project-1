@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <title>로그인 페이지</title>
     <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/layout-style.css">
     <link rel="stylesheet" href="../CSS/loginstyle.css">
+
+    <script src="../JS/layout.js" defer></script>
+    <script src="../JS/login-js.js"></script>
+
 </head>
 <body>
 
 <div id="loginPage">
+
+    <a href="../index.html" id="loginLogo">
+        <img src="../image/head-logo.png" alt="link-logo">
+    </a>
+
     <div id="loginCard">
+        
 
         <form id="login-form">
             <input type="text" id="loginId" placeholder="ID" required>
             <input type="password" id="loginPw" placeholder="Password" required>
 
             <div id="loginButtons">
-                <button type="submit" id="loginBtn">로그인</button>
-                <button type="button" id="signupBtn">회원가입</button>
+                <a id="loginBtn" class="loginBtn">로그인</a>
+                <a id="signupBtn" class="signupBtn">회원가입</a>
             </div>
         </form>
 
@@ -26,6 +37,7 @@
     </div>
 </div>
 
-<script src="../JS/login-js.js"></script>
+<div id="footer-area"></div>
+
 </body>
 </html>

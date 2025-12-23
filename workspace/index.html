@@ -4,43 +4,52 @@
     <meta charset="UTF-8">
     <title>메인화면</title>
     <link rel="stylesheet" href="./CSS/reset.css">
+    
     <link rel="stylesheet" href="./CSS/mainstyle.css">
 </head>
 
 <body>
 
-    <header id="top">
-        <div class="auth" id="authArea">
-            <a href="./HTML/login.html" class="button" id="loginBtn">로그인</a>
-            <a href="./HTML/signup-page.html" class="button" id="signupBtn">회원가입</a>
+    <div>
 
-        </div><!--auth-->
-
-        <div class="profile hidden" id="profileArea">
-            <button class="button" id="profileBtn">프로필</button>
-
-            <div class="profile-menu hidden" id="profileMenu">
-                <a href="./HTML/informationl-html.html" class="menu-link">내 정보</a>
-                <a href="./HTML/history-html.html" class="menu-link">검색 내역</a>
-                <button id="logoutBtn">로그아웃</button>
-
-            </div><!--profile-menu hidden-->
-
-        </div><!--profile hidden-->
-
-    </header><!--top-->
-
-    <main id="middle">
-        <div class="search-box">
-            <input type="text" placeholder="검색 또는 URL 입력">
-            <button class="search" id="searchBtn">검색</button>
+        <header id="top">
+            <div class="auth" id="authArea">
+                <a href="./HTML/login.html" class="button" id="loginBtn">로그인</a>
+                <a href="./HTML/signup-page.html" class="button" id="signupBtn">회원가입</a>
+                
+            </div><!--auth-->
             
-        </div><!--search-box-->
+            <div class="profile hidden" id="profileArea">
+                <button class="button" id="profileBtn">프로필</button>
+                
+                <div class="profile-menu hidden" id="profileMenu">
+                    <a href="./HTML/informationl-html.html" class="menu-link">내 정보</a>
+                    <a href="./HTML/history-html.html" class="menu-link">검색 내역</a>
+                    <button id="logoutBtn">로그아웃</button>
+                    
+                </div><!--profile-menu hidden-->
+            
+            </div><!--profile hidden-->
+        
+        </header><!--top-->
+    
+        <main id="middle">
+            <a href="./index.html">
+                <img src="../workspace/image/logo_text.png" alt="logo-text" >
+            </a>
 
-    </main><!--middle-->
+            <div class="search-box">
+                <input type="text" placeholder="검색 또는 URL 입력">
+                <button class="search" id="searchBtn">검색</button>
+            
+            </div><!--search-box-->
+        
+        </main><!--middle-->
+    
+        <button class="dark-mode-button">Dark mode</button>
+    
+        <script src="./JS/main-js.js"></script>
+    </div>
 
-    <button class="dark-mode-button">Dark mode</button>
-
-    <script src="./JS/main-js.js"></script>
 </body>
 </html>
