@@ -1,13 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.getElementById('signup-form');
-    const mainButton = document.getElementById('main-button');
 
-    mainButton.onclick = function() {
-        location.href = '../index.html';
-    };
-
-    form.onsubmit = function() {
+    form.onsubmit = function(e) {
+        e.preventDefault();
         const name = document.getElementById('name').value;
         const dob = document.getElementById('dob').value;
         const id = document.getElementById('id').value;
@@ -15,21 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const passwordConfirm = document.getElementById('password-confirm').value;
         const email = document.getElementById('email').value;
 
-        if (name.trim() === '') {
-            alert('이름을 입력해주세요.');
-            document.getElementById('name');
-            return false;
-        }
-
         if (!/^\d{6}$/.test(dob)) {
             alert('유효한 생년월일 6자리를 입력해주세요.');
             document.getElementById('dob');
-            return false;
-        }
-
-        if (id.trim() === '') {
-            alert('ID를 입력해주세요.');
-            document.getElementById('id');
             return false;
         }
 
@@ -53,6 +37,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         alert('회원가입이 완료되었습니다.');
         location.href = '../index.html';
-        return true;
     };
 });
