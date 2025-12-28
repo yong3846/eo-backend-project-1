@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const findForm = document.getElementById('find-password-form');
-    const mainBtn = document.getElementById('main-button');
 
     findForm.onsubmit = function() {        
         const name = document.getElementById('name').value;
@@ -16,9 +15,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         alert('비밀번호 찾기 요청을 전송합니다.');
         return true;
-    };
-
-    mainBtn.onclick = function() {
-        location.href = '../index.html';
     };
 });
