@@ -1,0 +1,32 @@
+:root {
+    --bg-app: #f0f0f0;
+    --bg-main: #ffffff;
+    --bg-sub: #e0e0e0;
+    --bg-sub-hover: #c0c0c0;
+    --bg-sub-2: #e5e5e5;
+
+    --border-input: #cccccc;
+    --border-sub: #999999;
+
+    --text-main: #000000;
+    --text-sub: #555555;
+
+    --shadow-main: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+body.dark {
+    --bg-app: #121212;
+    --bg-main: #1e1e1e;
+    --bg-sub: #2a2a2a;
+    --bg-sub-hover: #3a3a3a;
+    --bg-sub-2: #252525;
+
+    --border-input: #444444;
+    --border-sub: #555555;
+
+    --text-main: #f5f5f5;
+    --text-sub: #bbbbbb;
+
+    --shadow-main: 0 4px 12px rgba(0,0,0,0.6);
+}

@@ -2,12 +2,12 @@
     font-family: Arial, sans-serif;
     height: 100vh;
     position: relative;
+    background-color: var(--bg-app);
+    color: var(--text-main);
 }
-
 
 #top {
     display: flex;
-
     justify-content: flex-end;
     padding: 20px;
 }
@@ -17,35 +17,28 @@
     gap: 10px;
 }
 
-
 .button {
     padding: 10px 16px;
-
     border: none;
     border-radius: 6px;
-
-    background-color: #e0e0e0;
-
     cursor: pointer;
-
     font-size: 14px;
-
     text-decoration: none;
-    color: #000;
     display: inline-block;
+
+    background-color: var(--bg-sub);
+    color: var(--text-main);
 }
 
-
+.button:hover {
+    background-color: var(--bg-sub-hover);
+}
 
 #middle {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     flex-direction: column;
-
     height: 70vh;
 }
 
@@ -54,13 +47,10 @@
     line-height: 0;
 }
 
-
 #middle img {
     display: block;
-
     margin-bottom: -45px;
 }
-
 
 .search-box {
     display: flex;
@@ -70,103 +60,97 @@
 .search-box input {
     width: 420px;
     height: 45px;
-
     padding: 0 20px;
-
     border-radius: 25px;
-    border: 1px solid #ccc;
-
     font-size: 14px;
+
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border-input);
 }
 
 .search {
     padding: 0 25px;
-
     border: none;
     border-radius: 25px;
-
-    background-color: #d9d9d9;
-
     cursor: pointer;
+
+    background-color: var(--bg-sub);
+    color: var(--text-main);
 }
 
+.search:hover {
+    background-color: var(--bg-sub-hover);
+}
 
 #dark-mode-button {
     position: fixed;
-
     right: 20px;
     bottom: 20px;
-
     padding: 8px 14px;
-
     border: none;
     border-radius: 20px;
-
-    background-color: #d9d9d9;
-
     cursor: pointer;
-
     font-size: 12px;
+
+    background-color: var(--bg-sub);
+    color: var(--text-main);
+}
+
+#dark-mode-button:hover {
+    background-color: var(--bg-sub-hover);
 }
 
 .profile {
     position: relative;
 }
 
-
 .profile-menu {
     position: absolute;
     top: 45px;
     right: 0;
-    
     display: flex;
     flex-direction: column;
     gap: 6px;
-    
     padding: 12px;
     width: 150px;
-    
-    background-color: #ffffff;
     border-radius: 12px;
-    
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+
+    background-color: var(--bg-main);
+    box-shadow: var(--shadow-main);
     z-index: 100;
 }
 
-
 .profile-menu button {
     padding: 8px 10px;
-    
     border: none;
     border-radius: 8px;
-    
-    background-color: #eaeaea;
-    
     cursor: pointer;
     font-size: 13px;
     text-align: left;
+
+    background-color: var(--bg-sub);
+    color: var(--text-main);
 }
 
 .profile-menu button:hover {
-    background-color: #dcdcdc;
+    background-color: var(--bg-sub-hover);
 }
 
 .menu-link {
     display: block;
-
     padding: 8px 10px;
     border-radius: 8px;
-
-    background-color: #eaeaea;
-    color: #000;
     text-decoration: none;
-
     font-size: 13px;
     text-align: left;
+
+    background-color: var(--bg-sub);
+    color: var(--text-main);
 }
 
 .menu-link:hover {
-    background-color: #dcdcdc;
+    background-color: var(--bg-sub-hover);
 }
 
 .hidden {

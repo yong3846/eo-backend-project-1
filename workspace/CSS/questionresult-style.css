@@ -1,5 +1,6 @@
 #app {
-    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--bg-app);
 }
 
 
@@ -31,7 +32,9 @@
     height: 36px;
     padding: 0 14px;
     border-radius: 18px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-input);
+    background-color: var(--bg-main);
+    color: var(--text-main);
 }
 
 #search-btn {
@@ -39,7 +42,7 @@
     height: 36px;
     border-radius: 50%;
     border: none;
-    background-color: #e0e0e0;
+    background-color: var(--bg-sub);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -54,15 +57,17 @@
 
 main {
     flex: 1;
+    max-width: 1280px;
     width: 80%;
     margin: 0 auto;
 }
 
 #main-box {
-    background-color: #ffffff;
+    background-color: var(--bg-main);
+    min-width: 966px;
     border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-main);
 }
 
 
@@ -76,10 +81,11 @@ main {
 
 #result-tab button {
     border: none;
-    background: #b8b8b8;
+    background: var(--bg-sub);
     padding: 6px 14px;
     border-radius: 12px;
     cursor: pointer;
+    color: var(--text-main);
 }
 
 
@@ -93,6 +99,7 @@ main {
 
 #result-left {
     flex: 4;
+    min-width: 520px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -100,6 +107,7 @@ main {
 
 #result-right {
     flex: 2;
+    min-width: 390px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -111,23 +119,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     min-height: 60px;
     padding: 18px 16px;
-    background: #e0e0e0;
+    background: var(--bg-sub);
     border-radius: 10px;
     text-decoration: none;
-    color: #000;
+    color: var(--text-main);
 }
 
-
 .result-box:hover {
-    background: #bdbcbc;
+    background: var(--bg-sub-hover);
 }
 
 #more {
     font-size: 13px;
-    color: #555;
+    color: var(--text-sub);
     cursor: pointer;
 }
 
@@ -135,13 +141,13 @@ main {
 .text-box {
     flex: 1;
     box-sizing: border-box;
-    background: #e0e0e0;
+    background: var(--bg-sub);
     border-radius: 10px;
     padding: 18px 16px;
     min-height: 90px;
 
     font-size: 14px;
-    color: #333;
+    color: var(--text-main);
     line-height: 1.6;
 }
 
@@ -160,23 +166,25 @@ main {
     gap: 20px;
 }
 
-
 #weather-box > div {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-
 #weather-box span {
     font-size: 40px;
     line-height: 1;
 }
 
-
 #weather-box hr {
     border: none;
     height: 1px;
-    background: #c0c0c0;
+    background: var(--border-input);
     margin: 0;
+}
+
+
+#footer-content1 {
+    min-width: 1200px;
 }

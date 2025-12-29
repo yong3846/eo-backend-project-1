@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const logoutBtn = document.getElementById("logoutBtn");
     const searchBtn = document.getElementById("searchBtn");
 
+    const darkModeBtn = document.getElementById("dark-mode-button");
+
+
     function applyAuthUI() {
         const isLogin = localStorage.getItem("isLogin") === "true";
 
@@ -42,4 +45,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     applyAuthUI();
+
+
+
+
+    function updateButtonText() {
+        if (!darkModeBtn) return;
+        darkModeBtn.textContent = document.body.classList.contains("dark")
+            ? "Light mode"
+            : "Dark mode";
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    updateButtonText();
+
+    if (darkModeBtn) {
+        darkModeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            const isDark = document.body.classList.contains("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            updateButtonText();
+        });
+    }
+
+
 });
